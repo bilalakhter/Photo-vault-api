@@ -2,12 +2,12 @@
   "name": "photo-vault-api",
   "version": "1.0.0",
   "description": "",
-    "main": "index.js",
+  "main": "index.js",
     "prisma": {
-       "seed": "node --require esbuild-register src/seed.ts"
-     },
+    "seed": "node --require esbuild-register prisma/seed.ts"
+   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev" : "nodeman src/index.ts"
   },
   "keywords": [],
@@ -18,7 +18,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "express-validators": "^1.0.4"
+    "express-validator": "^7.0.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
