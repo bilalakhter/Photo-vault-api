@@ -1,18 +1,18 @@
 import { db } from "../src/db.server";
 
-type Book = {
+type Image = {
     title: String;
-    author: String;
+    tag: String;
 }
 
 async function seed() {
     await Promise.all(
-        getBooks().map((Book) => {
-            const { title, author } = Book;
-            return db.Book.create({
+        getImage().map((image) => {
+            const { title, tag } = image;
+            return db.image.create({
                 data: {
                     title,
-                    author
+                    tag
                 },
             })
         })
@@ -21,15 +21,8 @@ async function seed() {
 
 seed();
 
-function getBooks(): Array<Book> {
+function getImage(): Array<Image> {
     return [
-       {
-        title: "The Great Gatsby",
-        author: "F. Scott Fitzgerald"
-        },
-        {
-            title: "The Catcher in the Rye",
-            author: "J.D. Salinger"
-        }
+      
     ]
 }
