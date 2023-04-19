@@ -10,8 +10,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Image {
+model File {
   id    Int    @id @default(autoincrement())
   title String
   tag   String
+  image String
 }
